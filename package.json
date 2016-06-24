@@ -1,0 +1,16 @@
+{
+  "name": "sendEmail",
+  "version": "0.1.0",
+  "description": "find a meeting and send to u",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~4.7.2",
+    "jade": "^1.1.5",
+    "cookie-session": "^1.0.2",
+    "body-parser": "~1.5.2",
+    "request":"~2.36.0",
+    "ldapjs":"*"
+  },
+  "author": "xiLiu|liuxieric123@gmail.com",
+  "license": "MIT"
+}
