@@ -62,6 +62,8 @@ var checkOut = function(){
 			        console.log('Message sent: ' + info.response);
 			    }
 			}); 
+
+			meetingContent = undefined;
 		}
 		// request({url:meetingUrl,encoding:"utf-8"},function(erro,response,body){ //测试取到某条会议的内容
 		// 	$ = cheerio.load(body);
