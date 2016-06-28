@@ -22,14 +22,16 @@ var checkOut = function(){
 			data = $(".sec-3 .right").eq(i)
 			if (content.text() == data.text()){
 				index = i;
+				content = $(".sec-3 .right").eq(0)
 				break;
 			}
 			else if(i == 4){
 				index = 5;
+				content = $(".sec-3 .right").eq(0)
 			}
 		}
 
-		console.log(index)
+		//console.log(index)
 		for (var i = 0; i <= index-1; i++){
 			// data = $(".sec-3 .right").eq(i)
 			// console.log(data.text())
@@ -103,4 +105,4 @@ var sendMyEmail = function(meetingContent){
 }
 
 
-setInterval(checkOut,1000); //三个小时爬一次网页
+setInterval(checkOut,72000000); //三个小时爬一次网页
