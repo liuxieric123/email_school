@@ -16,7 +16,7 @@ var checkOut = function(){
 			content = $(".sec-3 .right").eq(0);
 		//console.log(content.text())
 		// var meetingUrl = $(".sec-3 .list a").eq(0).attr("href"); //测试取到标签a中的href属性
-		// console.log(meetingUrl);
+		//console.log(meetingUrl);
 		index = undefined;
 		for (var i = 0;i <= 4; i++){
 			data = $(".sec-3 .right").eq(i)
@@ -32,6 +32,7 @@ var checkOut = function(){
 		}
 
 		//console.log(index)
+		//console.log(content.text() === data.text())
 		for (var i = 0; i <= index-1; i++){
 			// data = $(".sec-3 .right").eq(i)
 			// console.log(data.text())
@@ -47,8 +48,8 @@ var checkOut = function(){
 				// 	temp.search("重磁") !== -1){
 				meetingContent = meetingContent + temp;
 				if (requestTimes == (index - 1)){
-					sendMyEmail(meetingContent)
-					requestTimes = 0;
+					//sendMyEmail(meetingContent)
+					requestTimes = 0; 	
 				}
 				else{
 					requestTimes++;
@@ -66,7 +67,7 @@ var checkOut = function(){
 var sendMyEmail = function(meetingContent){
 	console.log(meetingContent)
 	if (meetingContent.length !== 0){ //如果有更新内容就发送邮件
-		var transporter = nodemailer.createTransport({
+		var transporter = nodeEmail.createTransport({
 		    host:'smtp.163.com',
 		    secureConnection:true,
 		    port:465,
@@ -105,4 +106,4 @@ var sendMyEmail = function(meetingContent){
 }
 
 
-setInterval(checkOut,72000000); //三个小时爬一次网页
+setInterval(checkOut,1000); //三个小时爬一次网页
