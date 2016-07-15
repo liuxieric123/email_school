@@ -72,13 +72,13 @@ var sendMyEmail = function(meetingContent){
 		    secureConnection:true,
 		    port:465,
 		    auth: {
-		        user: 'liuxieric123@163.com',
-		        pass: 'liu962888'
+		        user: '****',
+		        pass: '***'
 		    }
 		});
 
 		var mailOptions = {
-		    from: 'liuxieric123@163.com', // sender address
+		    from: '***', // sender address
 		    to: '47882220@qq.com', // list of receivers
 		    subject: '学术会议通知', // Subject line
 		    text: meetingContent, // plaintext body
